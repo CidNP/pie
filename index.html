@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<body>
+<center>
+<h1>GDP Components of Italy </h1>
+
+<div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Components of GDP', 'Percentage'],
+  ['Consumption', 57.5],
+  ['Investment', 19.1],
+  ['Net Export', 31.70],
+  ['Government Expenditure', 57.29],
+  ['Net Import', 28.41]
+
+]);
+
+  var options = { 'width':1000, 'height':400};
+
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+</center>
+<h2>GDP rank of Italy is 8th with $2.120 Trillion(nominal,2021) </h2> 
+<h3>Reference: 
+    
+    <ol>
+        <li><a href="ceicdata.com">ceicdata.com</a></li>
+        <li><a href="wikipedia.com">wikipedia.com</a></li>
+        <li><a href="https://www.statista.com/statistics/268355/government-expenditure-as-share-of-the-gross-domestic-product-gdp-in-italy/">statista.com</a></li>
+        <li><a href="https://wits.worldbank.org/CountryProfile/en/ITA">wits.worldbank.org</a></li>
+    
+    </ol>
+    </h3>
+</body>
+</html>
